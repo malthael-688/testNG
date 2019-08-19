@@ -1,12 +1,11 @@
 package com.dcits.testng_demo.helloworld;
 
-
 import org.testng.annotations.Test;
-@Test
-public class HelloWorld {
-    @Test
+
+public class HelloWorld2 {
+
     public void sayHello()
     {
-        System.out.println("hello world!");
+        System.out.println("Hello TestNG!");
     }
 }

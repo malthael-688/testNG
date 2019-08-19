@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testdemo1" allow-return-values="true">
+    <test name="testdemo1">
+        <groups>
+            <run>
+                <include name="test1"/>
+                <exclude name="test2"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.dcits.testng_demo.basicAnnotation.at_Test.TestDemo4">
+                <methods>
+                    <include name="test*"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
