@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ParametersDemo01">
+    <test name="ParametersDemo01">
+        <parameter name="hello" value="world"/>
+        <classes>
+            <class name="com.dcits.testng_demo.basicAnnotation.at_Parameters.ParametersDemo01"></class>
+        </classes>
+    </test>
+</suite>

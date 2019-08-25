@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
+  <test name="TestNG-demo(failed)">
+    <classes>
+      <class name="com.dcits.defaultReport.TestDefaultReport">
+        <methods>
+          <include name="test4"/>
+        </methods>
+      </class> <!-- com.dcits.defaultReport.TestDefaultReport -->
+    </classes>
+  </test> <!-- TestNG-demo(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->

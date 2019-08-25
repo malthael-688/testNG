@@ -2,6 +2,8 @@ package com.dcits.testng_demo.basicAnnotation.at_Test;
 
 import org.testng.annotations.Test;
 
+import java.util.Random;
+
 /**
  * @author Malthael
  * @date 2019/8/19
@@ -9,8 +11,8 @@ import org.testng.annotations.Test;
  */
 public class TestDemo20 {
 
-    @Test(retryAnalyzer= OverrideRetry.class)
+    @Test(retryAnalyzer= OverrideRetry.class,invocationCount = 10)
     public void test1(){
-        System.out.println(1/0);
+        System.out.println(1/new Random().nextInt(1));
     }
 }

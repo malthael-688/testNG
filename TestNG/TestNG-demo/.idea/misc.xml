@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/sbdemo/pom.xml" />
+        <option value="$PROJECT_DIR$/test-reportNG-report/pom.xml" />
         <option value="$PROJECT_DIR$/testng-demo-simple/sbdemo/pom.xml" />
       </set>
     </option>

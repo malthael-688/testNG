@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FactoryDemo1">
+    <test name="FactoryDemo1" verbose="2" preserve-order="true" group-by-instances="true">
+        <classes>
+            <class name="com.dcits.testng_demo.basicAnnotation.at_Factory.FactoryDemo1">
+            </class>
+        </classes>
+    </test>
+</suite>

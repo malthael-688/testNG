@@ -13,7 +13,7 @@ public class TestDemo3 {
      * 设置为false，执行测试会忽略@Test注解的test2方法。
      */
     @Test(enabled = false)
-    void test1()
+    public void test1()
     {
         System.out.println("test2");
     }

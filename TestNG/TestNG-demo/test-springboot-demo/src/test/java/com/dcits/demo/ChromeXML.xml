@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SuperXMLCtrl" verbose="1" parallel="classes" junit="false" group-by-instances="false" preserve-order="true" allow-return-values="true" configfailurepolicy="skip">
+
+    <test name = "AllTest" preserve-order="true" parallel="classes">
+        <parameter name="UserName" value="1041405881"></parameter>
+        <parameter name="UserPd" value="helloworld"></parameter>
+        <classes>
+            <class name="com.dcits.demo.OpenChrome">
+                <methods >
+                    <include name="register"/>
+                    <include name="repeatregister"/>
+                    <exclude name="repeat2register"/>
+                    <include name="login"/>
+                    <exclude name="loginError"/>
+                    <include name="loginFromExcel"/>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+
+</suite>

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
  * @date 2019/8/19
  * 注解:@Test讲解
  */
-@Test
+
 public class TestDemo1 {
     /**
      * 每一个被@Test注解的方法都可以单独运行

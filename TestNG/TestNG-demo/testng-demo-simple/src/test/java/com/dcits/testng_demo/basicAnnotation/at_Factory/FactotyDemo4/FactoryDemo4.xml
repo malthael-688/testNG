@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FactoryDemo4" preserve-order="true" group-by-instances="true">
+    <test name="test1" >
+        <parameter name="nums" value="10"></parameter>
+        <classes>
+            <class name="com.dcits.testng_demo.basicAnnotation.at_Factory.FactotyDemo4.TestWebServer">
+            </class>
+        </classes>
+    </test>
+    <test name="test2" >
+        <parameter name="nums" value="20"></parameter>
+        <classes>
+            <class name="com.dcits.testng_demo.basicAnnotation.at_Factory.FactotyDemo4.TestWebServer">
+            </class>
+        </classes>
+    </test>
+    <test name="test3" >
+        <parameter name="nums" value="30"></parameter>
+        <classes>
+            <class name="com.dcits.testng_demo.basicAnnotation.at_Factory.FactotyDemo4.TestWebServer">
+            </class>
+        </classes>
+    </test>
+</suite>

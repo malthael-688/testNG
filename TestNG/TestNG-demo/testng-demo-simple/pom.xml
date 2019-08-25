@@ -23,7 +23,7 @@
             </plugin>
         </plugins>
     </build>
-
+    <!--添加testng依赖-->
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
@@ -36,6 +36,20 @@
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
             <scope>compile</scope>
+        </dependency>
+
+        <!--添加Selenium框架依赖-->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+
+        <!--添加谷歌驱动-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>25.1-jre</version>
         </dependency>
     </dependencies>
 </project>

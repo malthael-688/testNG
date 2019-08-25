@@ -1,5 +1,6 @@
 package com.dcits.testng_demo.basicAnnotation.at_Test;
 
+import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 
 /**
@@ -12,11 +13,11 @@ public class TestDemo21 {
     @Test(invocationCount = 10)
     public void test1()
     {
-        System.out.println(Thread.currentThread().getName()+"  "+Thread.currentThread().getId()+":  "+i++);
+        System.out.println(Thread.currentThread().getName()+"  "+Thread.currentThread().getId()+":  "+"i:"+i++);
     }
     @Test(invocationCount = 10)
     public void test2()
     {
-        System.out.println(Thread.currentThread().getName()+"  "+Thread.currentThread().getId()+":  "+i++);
+        System.out.println(Thread.currentThread().getName()+"  "+Thread.currentThread().getId()+":  "+"i:"+i++);
     }
 }

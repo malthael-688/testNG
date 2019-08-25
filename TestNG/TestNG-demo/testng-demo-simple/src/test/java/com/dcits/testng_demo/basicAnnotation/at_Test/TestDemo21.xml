@@ -3,7 +3,8 @@
 <suite name="TestDemo21"  parallel="methods">
     <test name="TestDemo21">
         <classes>
-            <class name="com.dcits.testng_demo.basicAnnotation.at_Test.TestDemo21"></class>
+            <class name="com.dcits.testng_demo.basicAnnotation.at_Test.TestDemo21">
+            </class>
         </classes>
     </test>
 </suite>

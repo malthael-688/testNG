@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestDemo21" >
+    <test name="TestDemo21">
+        <classes>
+            <class name="com.dcits.defaultReport.TestDefaultReport">
+            </class>
+        </classes>
+    </test>
+</suite>

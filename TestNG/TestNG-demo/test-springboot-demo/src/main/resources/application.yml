@@ -1,0 +1,42 @@
+#服务器设置地址
+server:
+  port: 8668
+#数据库连接
+spring:
+  datasource:
+    username: root
+    password: nwpu.123.com
+    url: jdbc:mysql://193.112.17.184:3306/springboottest?serverTimezone=GMT%2B8
+    driver-class-name:  com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    test-while-idle: true
+    test-on-borrow: false
+    test-on-return: false
+    pool-prepared-statements: true
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    stat-view-servlet:
+      login-username: admin
+      login-password: 123456
+      reset-enable: false
+      url-pattern: /druid/*
+      # 添加IP白名单
+      #allow:
+      # 添加IP黑名单，当白名单和黑名单重复时，黑名单优先级更高
+      #deny:
+      web-stat-filter:
+        # 添加过滤规则
+        url-pattern: /*
+        # 忽略过滤格式
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml

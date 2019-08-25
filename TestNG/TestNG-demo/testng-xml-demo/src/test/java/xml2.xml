@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suit1" object-factory="">
+    <parameter name="Author" value="Diao"></parameter>
+    <test name = "allTestsInAClass" preserve-order="true">
+
+        <packages>
+            <package name="forShow.*">
+
+            </package>
+            <package name="testaddNum.*">
+            </package>
+        </packages>
+
+    </test>
+    <test name="someTestClass">
+        <classes>
+            <class name="testaddNum.getParamFromXml" >
+                <methods>
+                    <include name="printDone">
+
+                    </include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

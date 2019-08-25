@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="1">
+
+    <test name="TestNG1">
+        <groups>
+            <!--组中组，即test1包含了test2和test3两个组-->
+            <define name="test1">
+                <include name="test2"/>
+                <include name="test3"/>
+            </define>
+
+            <!--运行test1组，不运行test2组-->
+            <run>
+                <include name="test1"/>
+                <exclude name="test2"/>
+            </run>
+
+            <!--test3组依赖于test4组，多个依赖用空格隔开-->
+            <dependencies>
+                <group name="test3" depends-on="test4"/>
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="groups.demo"></class>
+        </classes>
+    </test> <!-- TestNG -->
+</suite>
