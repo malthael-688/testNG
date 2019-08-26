@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SuperXMLCtrl]" parallel="classes" allow-return-values="true">
+  <listeners>
+    <listener class-name="com.dcits.listeners.Select"/>
+  </listeners>
+  <test name="AllTest(failed)" parallel="classes">
+    <parameter name="UserName" value="1041405881"/>
+    <parameter name="UserPd" value="helloworld"/>
+    <classes>
+      <class name="com.dcits.demo.OpenChrome">
+        <methods>
+          <include name="init"/>
+          <include name="loginFromExcel" invocation-numbers="3"/>
+          <include name="register" invocation-numbers="0"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- com.dcits.demo.OpenChrome -->
+    </classes>
+  </test> <!-- AllTest(failed) -->
+</suite> <!-- Failed suite [SuperXMLCtrl] -->

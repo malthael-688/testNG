@@ -1,7 +1,8 @@
 package com.dcits.testng_demo.basicAnnotation.at_Test;
 
+import org.testng.annotations.Factory;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import java.util.Random;
 
 /**
@@ -10,9 +11,8 @@ import java.util.Random;
  * 简单使用@Test(retryAnalyzer= OverrideRetry.class)
  */
 public class TestDemo20 {
-
     @Test(retryAnalyzer= OverrideRetry.class,invocationCount = 10)
     public void test1(){
-        System.out.println(1/new Random().nextInt(1));
+        System.out.println(1/new Random().nextInt(2));
     }
 }

@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SpringBootHelloWorld_TestNG" />
         <module name="test-default-report" />
         <module name="test-extentreport-report" />
         <module name="test-springboot-demo" />

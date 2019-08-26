@@ -1,5 +1,9 @@
 # TestNG使用指南
 
+[TOC]
+
+
+
 ## 一、简述
 
 ### 1.自动化测试
@@ -225,6 +229,8 @@
 > 1.File->Settings->Plugins->输入TestNG
 >
 > 安装重启即可
+
+
 
 ## 三、基本使用
 
@@ -1073,7 +1079,7 @@ Total tests run: 1, Failures: 0, Skips: 0
 
 > 如果需要传递复杂参数或需要从Java创建的参数（复杂对象，从属性文件或数据库读取的对象等等），则在testng.xml中指定参数可能不够。 在这种情况下，您可以使用数据提供程序提供测试所需的值。 数据提供程序是类上的一个方法，它返回一组对象数组。 此方法使用@DataProvider注释：
 
-![](C:/Users/lenovo/Desktop/GitHub/testNG/image/dataProvider.png)
+![](./data/image/dataProvider.png)
 
 > 结合@DataProvider使用
 
@@ -1859,7 +1865,7 @@ Total tests run: 8, Failures: 0, Skips: 0
 
 
 
-###### Factory(dataProviderClass =xxx.class)
+###### @Factory(dataProviderClass =xxx.class)
 
 > 与@Test(dataProviderClass =xxx.class)相似
 
@@ -2684,6 +2690,21 @@ Total tests run: 3, Failures: 0, Skips: 0
 
 ```
 
+
+```xml
+TestNG-demo
+|____testng-xml-demo
+| |____java
+| | |____addNum
+| | | |____TowIntAdd.java 实现两个整数的加法
+| |____test
+| | |____说明（可能缺省）
+|____
+| |____说明
+| | |____说明（可能缺省）
+
+
+```
 #### 1.suit
 
 一个xml里面只可以拥有一个suit，也就是说suit必须作为根元素，且suit标签不可以缺省。
@@ -3227,7 +3248,7 @@ groups
 
 样式如下:
 
-![](C:/Users/lenovo/Desktop/GitHub/testNG/image/default-report.png)
+![](./data/image/default-report.png)
 
 ### 2.ExtentReports
 
@@ -3235,7 +3256,7 @@ groups
 
 样式如下:
 
-![](C:/Users/lenovo/Desktop/GitHub/testNG/image/extentreport.png)
+![](./data/image/extentreport.png)
 
 
 
@@ -3387,8 +3408,8 @@ public class ExtentTestNGIReporterListener1 implements IReporter {
         //怎么样解决cdn.rawgit.com访问不了的情况
         htmlReporter.config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
 
-        htmlReporter.config().setDocumentTitle("api自动化测试报告");
-        htmlReporter.config().setReportName("api自动化测试报告");
+        htmlReporter.config().setDocumentTitle("自动化测试报告");
+        htmlReporter.config().setReportName("自动化测试报告");
         htmlReporter.config().setChartVisibilityOnOpen(true);
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setTheme(Theme.STANDARD);
@@ -3553,6 +3574,26 @@ public class MyRetry implements IRetryAnalyzer {
 
 ```
 
+5.Test.xml
+
+~~~xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestDemo21" configfailurepolicy="skip" >
+    <test name="TestDemo21">
+        <classes>
+            <class name="com.dcits.TestReport">
+            </class>
+        </classes>
+    </test>
+    <listeners>
+    <listener class-name="com.dcits.ExtentTestNGIReporterListener1"/>
+</listeners>
+</suite>
+~~~
+
+
+
 5.运行Test.xml
 
 如果报错找不到test-ourput文件夹，添加该文件夹与src同级目录
@@ -3577,7 +3618,7 @@ public class MyRetry implements IRetryAnalyzer {
 
 > ztest是一个测试报告，报告清晰简单，有饼图，汇总，运行详情。
 
-![](C:\Users\lenovo\Desktop\GitHub\TestNG\TestNG\image\ztest.png)
+![](./data\image\ztest.png)
 
 
 
@@ -3589,9 +3630,9 @@ public class MyRetry implements IRetryAnalyzer {
 
 > allure的使用推荐与jenkins配合使用，jenkins可以安装allure插件
 
-![](C:\Users\lenovo\Desktop\GitHub\TestNG\TestNG\image\1.png)
+![](./data\image\1.png)
 
-![](C:\Users\lenovo\Desktop\GitHub\TestNG\TestNG\image\2.png)
+![](./data\image\2.png)
 
 官方文档：
 
@@ -3788,7 +3829,7 @@ Selenium是一个用于Web应用程序测试的工具。Selenium测试直接运�
 >
 > 7.WebDriver没有用于生成报告的本机机制。 TestNG可以生成可读格式的报告，如下所示。
 >
-> ![](C:/Users/lenovo/Desktop/GitHub/testNG/image/report1.png)
+> ![](data/image/report1.png)
 >
 > 8.TestNG简化了测试编码的方式。 在我们的测试中不再需要静态main方法。 动作序列由易于理解的注释调节，这些注释不需要静态方法。
 
@@ -3884,6 +3925,449 @@ Total tests run: 10, Failures: 0, Skips: 0
 [TestNG] Time taken by [FailedReporter passed=0 failed=0 skipped=0]: 0 ms
 [TestNG] Time taken by org.testng.reporters.jq.Main@3d24753a: 109 ms
 [TestNG] Time taken by org.testng.reporters.EmailableReporter2@6108b2d7: 0 ms
-
 ```
+
+
+
+### 3.SpringBoot
+
+接下来我们通过一个简单的demo来了解SpringBoot与TestNG是如何有机的结合的:
+
+> 转载翻译:https://www.javainuse.com/spring/springboot_testng
+
+##### 1.项目结构:
+
+![1566737111646](.\data\image\testng1.png)
+
+##### 2.pom.xml依赖
+
+~~~xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.javainuse</groupId>
+	<artifactId>SpringBootHelloWorld_TestNG</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>SpringBootHelloWorld</name>
+	<description>Demo project for Spring Boot</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.1.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8.5</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>
+
+~~~
+
+##### 3.Emloyee实体类
+
+~~~java
+package com.javainuse.model;
+
+public class Employee {
+	private String empId;
+	private String name;
+	private String designation;
+	private double salary;
+
+	public Employee() {
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public String getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(String empId) {
+		this.empId = empId;
+	}
+
+}
+~~~
+
+##### 4.TestController
+
+~~~java
+package com.javainuse.controllers;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.javainuse.model.Employee;
+
+@RestController
+public class TestController {
+
+	@RequestMapping(value = "/employee", method = RequestMethod.GET)
+	public Employee firstPage() {
+
+		Employee emp = new Employee();
+		emp.setName("emp1");
+		emp.setDesignation("manager");
+		emp.setEmpId("1");
+		emp.setSalary(3000);
+
+		return emp;
+	}
+}
+~~~
+
+##### 5.SpringBootHelloWorldApplication
+
+~~~java
+package com.javainuse;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringBootHelloWorldApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootHelloWorldApplication.class, args);
+	}
+}
+~~~
+
+
+
+接下来我们运行实例
+
+![](.\data\image\testng2.png)
+
+##### 6.测试类
+
+我们接下来开始写testNG测试类:
+
+~~~java
+package com.javainuse.test;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.javainuse.SpringBootHelloWorldApplication;
+
+@SpringBootTest(classes = SpringBootHelloWorldApplication.class)
+public class SpringBootHelloWorldTests extends AbstractTestNGSpringContextTests {
+
+	@Autowired
+	private WebApplicationContext webApplicationContext;
+
+	private MockMvc mockMvc;
+
+	@BeforeClass
+	public void setup() {
+		mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+	}
+
+	@Test
+	public void testEmployee() throws Exception {
+		mockMvc.perform(get("/employee")).andExpect(status().isOk())
+				.andExpect(content().contentType("application/json;charset=UTF-8"))
+				.andExpect(jsonPath("$.name").value("emp1")).andExpect(jsonPath("$.designation").value("manager"))
+				.andExpect(jsonPath("$.empId").value("1")).andExpect(jsonPath("$.salary").value(3000));
+
+	}
+
+}
+
+~~~
+
+
+
+知识点1：
+
+AbstractTestNGSpringContextTests:
+
+> 英:	Abstract base test class which integrates the Spring TestContext Framework with explicit ApplicationContext testing support in a TestNG environment.
+>
+> 中:	抽象基本测试类，它将Spring TestContext Framework与TestNG环境中的显式ApplicationContext测试支持集成在一起。
+
+
+
+知识点2：
+
+WebApplicationContext：
+
+  WebApplicationContext是专门为web应用准备的,他允许从相对于web根目录的路劲中装载配置文件完成初始化工作，从WebApplicationContext中可以获得ServletContext的引用，整个Web应用上下文对象将作为属性放置在ServletContext中，以便web应用可以访问spring上下文,spring中提供WebApplicationContextUtils的getWebApplicationContext(ServletContext src)方法来获得WebApplicationContext对象
+
+> 详细请见:https://www.cnblogs.com/09120912zhang/p/7746252.html
+
+
+
+知识点3:
+
+MockMvc:
+
+> ​	对模块进行集成测试时，希望能够通过输入URL对Controller进行测试，如果通过启动服务器，建立http client进行测试，这样会使得测试变得很麻烦，比如，启动速度慢，测试验证不方便，依赖网络环境等，所以为了可以对Controller进行测试，我们引入了MockMVC。
+>  ​	MockMvc实现了对Http请求的模拟，能够直接使用网络的形式，转换到Controller的调用，这样可以使得测试速度快、不依赖网络环境，而且提供了一套验证的工具，这样可以使得请求的验证统一而且很方便。
+
+> 详情请见:https://blog.csdn.net/zai_xia/article/details/83419104
+
+
+
+### 4.Jenkins
+
+> 参考文档:
+>
+> https://blog.csdn.net/miss1181248983/article/details/82840006 jenkins入门
+>
+> https://linux.cn/article-9926-1.html  CI/CD(知识点相当硬)
+>
+> https://blog.csdn.net/sinat_39295715/article/details/82222818 CI持续集成
+>
+> https://www.cnblogs.com/selimsong/p/9398738.html 用Github实现简单的CI/CD
+>
+> https://baike.baidu.com/item/gitlab/3059600?fr=aladdin GitLab
+
+#### CI/CD介绍
+
+开发工作流程:
+
+> 编码 --> 构建 --> 集成 --> 测试 --> 交付 --> 部署
+
+![](C:\Users\lenovo\Desktop\GitHub\testNG\data\image\CI.png)
+
+正如你在上图中看到，[持续集成(Continuous Integration)]、[持续交付(Continuous Delivery)]和[持续部署(Continuous Deployment)]有着不同的软件自动化交付周期。
+
+##### 持续集成（CI）
+
+上面整个流程中最重要的组成部分就是持续集成（Continuous integration，简称CI）。
+
+**持续集成**指的是，频繁地（一天多次）将代码集成到主干。将软件个人研发的部分向软件整体部分交付，频繁进行集成以便更快地发现其中的错误。
+
+它的好处主要有两个：
+
+> 1. 快速发现错误。每完成一点更新，就集成到主干，可以快速发现错误，定位错误也比较容易；
+> 2. 防止分支大幅偏离主干。如果不是经常集成，主干又在不断更新，会导致以后集成的难度变大，甚至难以集成。
+
+![](C:\Users\lenovo\Desktop\GitHub\testNG\data\image\CI1.png)
+
+持续集成并不能消除Bug，而是让它们非常容易发现和改正。持续集成的目的，就是让产品可以快速迭代，同时还能保持高质量。它的核心措施是，代码集成到主干之前，必须通过自动化测试。只要有一个测试用例失败，就不能集成。
+
+##### 持续交付
+
+> 持续交付（Continuous delivery）指的是，频繁地将软件的新版本，交付给质量团队或者用户，以供评审。如果评审通过，代码就进入生产阶段。
+
+> 持续交付在持续集成的基础上，将集成后的代码部署到更贴近真实运行环境的「类生产环境」(production-like environments)中。持续交付优先于整个产品生命周期的软件部署，建立在高水平自动化持续集成之上。
+
+![](C:\Users\lenovo\Desktop\GitHub\testNG\data\image\CD.png)
+
+持续交付可以看作持续集成的下一步。它强调的是，不管怎么更新，软件是随时随地可以交付的。
+
+
+
+##### 持续部署（CD）
+
+> **持续部署**（continuous deployment）是持续交付的下一步，指的是代码通过评审以后，自动部署到生产环境。
+
+> 持续部署的目标是，代码在任何时刻都是可部署的，可以进入生产阶段。
+
+> 持续部署的前提是能自动化完成测试、构建、部署等步骤。
+
+![](C:\Users\lenovo\Desktop\GitHub\testNG\data\image\CD1.png)
+
+> 总的来说，持续集成、持续交付、持续部署提供了一个优秀的 DevOps 环境。对于整个开发团队来说，能很大地提升开发效率，好处与挑战并行。无论如何，频繁部署、快速交付以及开发测试流程自动化都将成为未来软件工程的重要组成部分。
+
+#### Jenkins
+
+> Jenkins是一个开源的、可扩展的持续集成、交付、部署（软件/代码的编译、打包、部署）的基于web界面的平台。允许持续集成和持续交付项目，无论用的是什么平台，可以处理任何类型的构建或持续集成。
+
+特性:
+
+> 1.开源的java语言开发持续集成工具，支持CI，CD；
+>
+> 2.易于安装部署配置：可通过yum安装,或下载war包以及通过docker容器等快速实现安装部署，可方便web界面配置管理；
+>
+> 3.消息通知及测试报告：集成RSS/E-mail通过RSS发布构建结果或当构建完成时通过e-mail通知，生成JUnit/TestNG测试报告；
+>
+> 4.分布式构建：支持Jenkins能够让多台计算机一起构建/测试；
+>
+> 5.文件识别:Jenkins能够跟踪哪次构建生成哪些jar，哪次构建使用哪个版本的jar等； 
+>
+> 6.丰富的插件支持:支持扩展插件，你可以开发适合自己团队使用的工具，如git，svn，maven，docker等。
+
+##### 工作原理
+
+![](\data\image\jenkins.png)
+
+![](data\image\jenkins2.jpg)
+
+> 这里是选择Gitlab作为git server。Gitlab的功能和Github差不多，但是是开源的，可以用来搭建私有git server，也提供非常强大的web GUI，比如开发者互相review源代码的时候就会很方便。
+>
+> 系统的工作流程大概分为以下几步:
+>
+> 1> 开发者将新版本push到git server (Gitlab)。
+>
+> 2> Gitlab随后触发jenkins master结点进行一次build。(通过web hook或者定时检测)
+>
+> 3> jenkins master结点将这个build任务分配给若干个注册的slave结点中的一个，这个slave结点根据一个事先设置好的脚本进行build。这个脚本可以做的事情很多，比如编译，测试，生成测试报告等等。这些原本需要手动完成的任务都可以交给jenkins来做。
+>
+> 4> 我们在build中要进行编译，这里使用了分布式编译器distcc来加快编译速度。
+
+**部署方式：**
+
+> ##### **jenkins触发式构建：**用于开发环境部署**，**开发人员push代码或者合并代码到gitlab项目的master分支，jenkins就部署代码到对应服务器。
+>
+> **jenkins参数化构建：**用于测试环境预上线环境部署，开发push代码或者合并代码到gitlab项目的master分支之后，并不会部署代码，而是需要登录到jenkins的web界面，点击构建按钮，传入对应的参数（比如参数需要构建的tag，需要部署的分支）然后才会部署。
+>
+> **jenkins定时构建**：用于APP自动打包，定时构建是在参数化构建的基础上添加的，开发人员可以登录jenkins手动传入tag进行打包，如果不手动打包，那么jenkins就每天凌晨从gitlab拉取最新的APP代码打包。
+
+**监测变更:**
+
+>- **轮询**：监测程序反复询问代码管理系统，“代码仓库里有什么我感兴趣的新东西吗？”当代码管理系统有新的变更时，监测程序会“唤醒”并完成其工作以获取新代码并构建/测试它。
+>- **定期**：监测程序配置为定期启动构建，无论源码是否有变更。理想情况下，如果没有变更，则不会构建任何新内容，因此这不会增加额外的成本。
+>- **推送**：这与用于代码管理系统检查的监测程序相反。在这种情况下，代码管理系统被配置为提交变更到仓库时将“推送”一个通知到监测程序。最常见的是，这可以以 webhook 的形式完成 —— 在新代码被推送时一个挂勾hook的程序通过互联网向监测程序发送通知。为此，监测程序必须具有可以通过网络接收 webhook 信息的开放端口。
+
+
+
+##### 自动化测试原理
+
+> 参考文档:https://blog.csdn.net/boonya/article/details/77370097
+
+步骤:
+
+> 1.测试人员编写好测试用例
+>
+> 2.在jenkins构建任务测试及报告测试（可以采用测试报告Allure）
+>
+> 3.jenkins定时构建项目，运行测试用例
+>
+> 4.小组成员收到测试报告
+
+
+
+
+
+## 六、简单架构设计
+
+> 转载自:https://blog.csdn.net/huilan_same/article/details/52319537
+
+一个简单轻量级的自动化测试框架的目录结构如下:
+
+![](C:\Users\lenovo\Desktop\GitHub\testNG\data\image\content.png)
+
+分层如下：
+
+> 1.**config层**:	放配置文件，把所有的项目相关的配置均放到这里，用Python支持较好的配置文件格式如ini或yaml等进行配置。实现**配置与代码分离**。
+>
+> 2.**data层**:	放数据文件，可以把所有的testcase的参数化相关的文件放到这里，一般可采用xlsx、csv、xml等格式。实现**数据与代码分离**。
+>
+> 3.**drivers层**:	放所需的驱动，如Chromedriver、IEDriverServer等。
+>
+> 4.**log层**:	所有生成的日志均存放在这里，可将日志分类，如运行时日志test log，错误日志error log等。
+>
+> 5.**report层**:	放程序运行生成的报告，一般可有html报告、excel报告等。
+>
+> 6.**src源码层**:	放所有程序代码。其中还需要进行更进一步的分层:
+>
+> ​	1.test层:	放测试相关的文件，如case——测试用例，common——项目相关的抽象代码通用代码，page——页面类(Page-Object思想) ,suit——组织的测试套件
+>
+> ​	2.*utils层*：	所有的支撑代码都在这里，包括读取config的类、写log的类、读取excel、xml的类、生成报告的类（如HTMLTestRunner）、数据库连接、发送邮件等类和方法，都在这里。
+
+
+
+## 七、框架组合使用
+
+接口自动化框架:
+
+> java+testNG/Junit+Maven/Ant/Gradle+Jenkins+MySQL+testlink/redmine
+
+UI自动化测试框架:
+
+> java+selenium/appium+testNG/Junit+Maven/Ant/Gradle+Jenkins+MySQL+testlink/redmine
+
+它们都拥有共同特性：**编程语言+单元测试框架+扫描编译工具+持续集成工具+数据库+项目管理工具。**
+
+> 编程语言：编写测试脚本、日志记录和输出；
+>
+> 单元测试框架：提供测试脚本运行、异常校验等一些列的配置；
+>
+> 扫描编译工具：测试文件扫描编译，一般配合持续集成工具使用效果更佳；
+>
+> 持续集成工具：Jenkins，经典的持续集成工具；
+>
+> 数据库：测试数据管理；
+>
+> 项目管理工具：测试结果统计管理；
+
+
 

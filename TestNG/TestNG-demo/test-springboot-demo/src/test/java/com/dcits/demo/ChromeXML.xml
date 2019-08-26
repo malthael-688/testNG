@@ -13,11 +13,14 @@
                     <exclude name="repeat2register"/>
                     <include name="login"/>
                     <exclude name="loginError"/>
-                    <include name="loginFromExcel"/>
+                    <include name="loginFromDB"/>
                 </methods>
             </class>
         </classes>
 
     </test>
-
+    <listeners>
+        <listener class-name="com.dcits.report.ExtentTestNGIReporterListener1"/>
+        <listener class-name="com.dcits.listeners.Select"/>
+    </listeners>
 </suite>

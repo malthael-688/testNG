@@ -24,16 +24,24 @@ public class Select implements IMethodInterceptor {
 
         for (IMethodInstance methodInstance : methodInstances) {
             ITestNGMethod method = methodInstance.getMethod();
+
             if (method.getMethodName().equals("register")){
+                System.out.println(method.getMethodName());
                 Connection c = null;
                 Statement s = null;
                 try{
                     c = Connect.getInstance().getConnection();
                     s = c.createStatement();
-
-                    String str = "delete from User where account = 1041405881";
-                    s.executeQuery(str);
+                    String str = "show variables like \"sql_mode\";";
+                    s.execute(str);
+                    str = "set sql_mode='';";
+                    s.execute(str);
+                    str = "set sql_mode='NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES';\n";
+                    s.execute(str);
+                    str = "delete from User where account = 1041405881";
+                    s.execute(str);
                 }catch (Exception e){
+                    System.out.println(e.getMessage());
                     System.out.println("clean environment error");
                 }
             }

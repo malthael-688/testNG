@@ -1,10 +1,9 @@
 package com.dcits;
 
-import org.testng.Assert;
-import org.testng.Reporter;
-import org.testng.TestListenerAdapter;
+import org.testng.*;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.log4testng.Logger;
 
 import java.util.Random;
 
@@ -14,8 +13,11 @@ import java.util.Random;
  */
 @Test(description = "随机测试")
 public class TestReport {
+    //添加日志
+    public static Logger logger=Logger.getLogger(TestReport.class);
+
     Random random=new Random();
-    @Test(alwaysRun = true,invocationCount = 1000,description = "随机01")
+    @Test(alwaysRun = true,invocationCount = 10,description = "随机01",retryAnalyzer = MyRetry.class)
     public void test1()
     {
         Reporter.log("开始随机测试");
@@ -23,13 +25,13 @@ public class TestReport {
         Reporter.getOutput();
     }
 
-    @Test(description = "多线程随机运行",threadPoolSize = 10,invocationCount = 1000,timeOut = 10,alwaysRun = true)
+    @Test(description = "多线程随机运行",threadPoolSize = 10,invocationCount = 10,timeOut = 10,alwaysRun = true,retryAnalyzer = MyRetry.class)
     public void test2() throws InterruptedException {
         Reporter.log("开始多线程随机运行");
         Thread.sleep(random.nextInt(15));
     }
 
-    @Test(description = "错误重试",retryAnalyzer = MyRetry.class,invocationCount = 1000)
+    @Test(description = "错误重试",retryAnalyzer = MyRetry.class,invocationCount = 10)
     public void test3()
     {
         Reporter.log("开始错误重试");
@@ -38,7 +40,7 @@ public class TestReport {
         Reporter.getCurrentTestResult();
     }
 
-    @Test(description = "跳过测试",invocationCount = 1000,skipFailedInvocations = true)
+    @Test(description = "跳过测试",invocationCount = 10,skipFailedInvocations = true,retryAnalyzer = MyRetry.class)
     public void test4()
     {
         Reporter.log("开始跳过测试");

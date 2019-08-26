@@ -8,7 +8,7 @@ import org.testng.ITestResult;
  */
 public class OverrideRetry implements IRetryAnalyzer {
     private int count = 1;
-    private int max_retry_count = 3;
+    private int max_retry_count = 5;
 
     /*
      * OverrideRetry实现接口IRetryAnalyzer的方法，重复执行失败用例
@@ -22,6 +22,7 @@ public class OverrideRetry implements IRetryAnalyzer {
             count++;
             return true;
         }
+        count=1;
         return false;
     }
 }

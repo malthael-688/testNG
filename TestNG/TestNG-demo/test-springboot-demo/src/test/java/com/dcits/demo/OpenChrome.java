@@ -12,7 +12,6 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.lang.annotation.Target;
-@Listeners(com.dcits.listeners.Select.class)
 public class OpenChrome {
     WebDriver driver;
     private static String url = "http://localhost:8668";
@@ -74,7 +73,7 @@ public class OpenChrome {
 
     }
     @Test(dataProviderClass = com.dcits.dataprovider.GetDataFromDB.class, dataProvider = "getData")
-    public void loginFromExcel(String name,String pd,String result) throws InterruptedException {
+    public void loginFromDB(String name,String pd,String result) throws InterruptedException {
         String newurl = url + "/user?account="+name+"&password="+pd;
         driver.get(newurl);
         Thread.sleep(500);
