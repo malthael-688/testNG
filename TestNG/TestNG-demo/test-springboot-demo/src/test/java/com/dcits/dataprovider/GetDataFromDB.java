@@ -1,12 +1,16 @@
 package com.dcits.dataprovider;
 
+
 import org.testng.annotations.DataProvider;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class GetDataFromDB {
     @DataProvider(name = "getData")
     public static Object[][] getData(){

@@ -13,7 +13,10 @@ import org.testng.xml.XmlSuite;
 
 import java.io.File;
 import java.util.*;
-
+/**
+ * @author Malthael
+ * @Date 2019.8.27
+ */
 public class ExtentTestNGIReporterListener1 implements IReporter {
 
 

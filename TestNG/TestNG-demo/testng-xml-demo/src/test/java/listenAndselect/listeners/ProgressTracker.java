@@ -6,7 +6,10 @@ import org.testng.IInvokedMethod;
 import org.testng.IInvokedMethodListener;
 import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
-
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class ProgressTracker implements IInvokedMethodListener {
 
 	private long startTime = 0;

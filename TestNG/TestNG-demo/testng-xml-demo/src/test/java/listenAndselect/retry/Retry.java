@@ -3,7 +3,10 @@ package listenAndselect.retry;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
-
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class Retry implements IRetryAnalyzer {
 
     private static int retryCount = 1;

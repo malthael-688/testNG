@@ -29,6 +29,10 @@ import org.testng.annotations.ITestAnnotation;
  *     void transform(ITestAnnotation var1, Class var2, Constructor var3, Method var4);
  * }
  */
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class Annotation implements IAnnotationTransformer {
     public void transform(ITestAnnotation iTestAnnotation, Class aClass, Constructor constructor, Method method) {
         iTestAnnotation.setInvocationCount(2); //执行2次

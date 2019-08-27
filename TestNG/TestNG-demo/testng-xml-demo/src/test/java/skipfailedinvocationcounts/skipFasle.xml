@@ -1,3 +1,5 @@
+<!--DiaoJH-->
+<!--2019.8-->
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Suit1" verbose="1" allow-return-values="true" >

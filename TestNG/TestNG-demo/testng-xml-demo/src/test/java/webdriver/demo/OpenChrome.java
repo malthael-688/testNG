@@ -7,7 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import webdriver.brower.Brower;
-
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class OpenChrome {
     WebDriver driver;
 

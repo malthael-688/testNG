@@ -7,7 +7,10 @@ import org.testng.annotations.DataProvider;
 
 import java.io.File;
 import java.io.FileInputStream;
-
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class GetDataFromFile {
     @DataProvider(name = "dataFromExcel")
     public static Object[][] getExcelData(){

@@ -6,7 +6,10 @@ import listenAndselect.listeners.ProgressTracker;
 
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 @Listeners({ OSFilter.class, ProgressTracker.class })
 public class SampleTest {
 

@@ -15,7 +15,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.javainuse.SpringBootHelloWorldApplication;
-
+/**
+ * @author Malthael
+ * @Date 2019.8.27
+ */
 @SpringBootTest(classes = SpringBootHelloWorldApplication.class)
 public class SpringBootHelloWorldTests extends AbstractTestNGSpringContextTests {
 

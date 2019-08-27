@@ -15,6 +15,10 @@ import org.testng.Reporter;
 import org.testng.annotations.*;
 import org.testng.log4testng.Logger;
 import java.lang.annotation.Target;
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class OpenChrome {
     public static Logger logger=Logger.getLogger(OpenChrome.class);
     WebDriver driver;

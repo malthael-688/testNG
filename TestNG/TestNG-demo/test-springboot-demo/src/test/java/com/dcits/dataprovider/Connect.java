@@ -3,8 +3,8 @@ package com.dcits.dataprovider;
 import java.sql.*;
 
 /**
- * @author wben
- *
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
  */
 public class Connect {
 

@@ -2,12 +2,9 @@ package webdriver.brower;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 /**
- * @Author: xinyi
- * @Description:
- * @Date: Created In 17:30 2018/8/2
- * @Modified By:
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
  */
 
 public class Brower {

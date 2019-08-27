@@ -13,7 +13,10 @@ import org.testng.xml.XmlSuite;
 
 import java.io.File;
 import java.util.*;
-
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class demo implements IReporter {
     //生成的路径以及文件名
     private static final String OUTPUT_FOLDER = "test-output/";

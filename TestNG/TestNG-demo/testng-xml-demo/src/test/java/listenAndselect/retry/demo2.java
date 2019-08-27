@@ -3,7 +3,10 @@ package listenAndselect.retry;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class demo2 {
     @BeforeClass
     public void bfClass(){

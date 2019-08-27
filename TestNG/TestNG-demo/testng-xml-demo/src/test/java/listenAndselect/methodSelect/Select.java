@@ -15,6 +15,10 @@ import java.util.Set;
  *     List<IMethodInstance> intercept(List<IMethodInstance> var1, ITestContext var2);
  * }
  */
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class Select implements IMethodInterceptor {
     public List<IMethodInstance> intercept(List<IMethodInstance> methodInstances, ITestContext context) {
         List<IMethodInstance> result = new ArrayList<IMethodInstance>();

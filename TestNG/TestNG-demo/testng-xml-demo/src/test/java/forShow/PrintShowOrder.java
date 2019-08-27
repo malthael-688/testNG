@@ -5,7 +5,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class PrintShowOrder {
     @BeforeSuite
     public void beforeSuit(){

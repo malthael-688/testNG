@@ -1,5 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-
+<!--DiaoJH-->
+<!--2019.8-->
 <suite name="Suit1" verbose="1" allow-return-values="true" configfailurepolicy="skip">
 
     <test name="someTestClass">

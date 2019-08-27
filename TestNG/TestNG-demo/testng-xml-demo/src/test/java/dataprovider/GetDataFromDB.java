@@ -8,7 +8,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class GetDataFromDB {
     @DataProvider(name = "twoNum")
     public static Object[][] getTwoNumFromDB(){

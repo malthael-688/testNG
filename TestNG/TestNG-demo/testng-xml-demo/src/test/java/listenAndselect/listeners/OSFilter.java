@@ -13,7 +13,10 @@ import org.testng.IMethodInterceptor;
 import org.testng.ITestContext;
 import org.testng.ITestNGMethod;
 import org.testng.annotations.Test;
-
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class OSFilter implements IMethodInterceptor {
 
 	public static int totalIgnored = 0;

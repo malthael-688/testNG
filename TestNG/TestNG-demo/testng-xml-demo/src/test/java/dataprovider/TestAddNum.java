@@ -4,7 +4,10 @@ import addNum.TwoIntAdd;
 import mulNum.TowIntMul;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 public class TestAddNum {
     public int getRule(String str){
         if(str.equals("eq"))

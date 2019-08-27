@@ -1,5 +1,8 @@
 package com.javainuse.model;
-
+/**
+ * @author Malthael
+ * @Date 2019.8.27
+ */
 public class Employee {
 	private String empId;
 	private String name;

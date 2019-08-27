@@ -3,6 +3,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+/**
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
+ */
 @Listeners(listenAndselect.methodSelect.Select.class)
 public class demo {
     @BeforeClass

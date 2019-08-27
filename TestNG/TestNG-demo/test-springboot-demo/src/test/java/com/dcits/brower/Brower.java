@@ -9,10 +9,8 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author: xinyi
- * @Description:
- * @Date: Created In 17:30 2018/8/2
- * @Modified By:
+ * @Author: DiaoJH
+ * @Data: 2019/8/25
  */
 
 public class Brower {
