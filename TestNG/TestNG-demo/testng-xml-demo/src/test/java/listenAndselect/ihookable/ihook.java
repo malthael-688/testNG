@@ -6,7 +6,13 @@ import org.testng.ITestResult;
 
 public class ihook implements IHookable {
     public void run(IHookCallBack callBack, ITestResult testResult){
-        System.out.println("使用了IHookable:"+testResult.getName());
-        callBack.runTestMethod(testResult);
+
+        if (testResult.getName()=="test1")
+        {
+            System.out.println("使用了IHookable:"+testResult.getName());
+            callBack.runTestMethod(testResult);
+        }else
+            callBack.runTestMethod(testResult);
+
     }
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestThread" parallel="methods" >
+    <test name="TestThread">
+        <classes>
+            <class name="com.dcits.testng_demo.basicAnnotation.demo8_27.MultipleThread.TestThread">
+            </class>
+        </classes>
+    </test>
+</suite>

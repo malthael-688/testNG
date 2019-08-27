@@ -1,6 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="SuperXMLCtrl" verbose="1" parallel="classes" junit="false" group-by-instances="false" preserve-order="true" allow-return-values="true" configfailurepolicy="skip">
+<suite name="SuperXMLCtrl" verbose="1" parallel="classes" junit="false" group-by-instances="false"
+       preserve-order="true" allow-return-values="true" configfailurepolicy="skip">
 
     <test name = "AllTest" preserve-order="true" parallel="classes">
         <parameter name="UserName" value="1041405881"></parameter>
@@ -17,6 +18,7 @@
                 </methods>
             </class>
         </classes>
+
 
     </test>
     <listeners>

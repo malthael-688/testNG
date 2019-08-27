@@ -117,7 +117,7 @@
     | 在每个测试方法之后运行               | @AfterMethod                 | @After             |
     | 忽略测试                             | @Test(enable = )             | @ignore            |
     | 预期异常测试                         | @Test(exceptedExceptions = ) | @Test(excepted = ) |
-    | 超时测试                             | @Test(exceptedExceptions = ) | @Test(timeout=)    |
+    | 超时测试                             | @Test(timeout=)              | @Test(timeout=)    |
     | 监听器                               | @Listener                    | -                  |
 
     1. 从上述标签可以看出，JUnit能做的，TestNG皆可以。JUnit做不到的，TestNG也能做到。
@@ -1873,7 +1873,7 @@ Total tests run: 8, Failures: 0, Skips: 0
 
 
 
-#### 3.@Listener
+#### 3.@Listeners
 
 以下是 TestNG 提供的几种监听器：
 

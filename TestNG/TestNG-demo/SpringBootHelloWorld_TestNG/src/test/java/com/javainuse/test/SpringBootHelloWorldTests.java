@@ -29,7 +29,7 @@ public class SpringBootHelloWorldTests extends AbstractTestNGSpringContextTests 
 		mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 	}
 
-	@Test(invocationCount = 10)
+	@Test(invocationCount = 100,threadPoolSize = 10)
 	public void testEmployee() throws Exception {
 		System.out.println("Start test");
 		mockMvc.perform(get("/employee")).andExpect(status().isOk())

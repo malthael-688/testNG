@@ -18,7 +18,7 @@ import java.util.Random;
  */
 public class RandomFunc {
     static Random random = new Random();
-    static String path = "C:\\Users\\lenovo\\Desktop\\GitHub\\testNG\\register.xls";
+    static String path = "C:\\Users\\lenovo\\Desktop\\GitHub\\testNG\\data\\register.xls";
     static String ruleName = "";
     static ArrayList<Rule> rules = ReadFromExcel.getRulesFromExcel(path);
     //数据信息

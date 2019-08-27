@@ -3,16 +3,18 @@ package com.randomData;
 import com.randomData.func.RandomFunc;
 import com.randomData.func.WriteToExcel;
 import jxl.write.WriteException;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 /**
  * @author Malthael
- * @date 2019/8/21
+ * @date 2019/8/27
  */
-public class test {
-    public static void main(String[] args) throws IOException, WriteException {
+public class TestRandom {
+    @Test(invocationCount = 100)
+    public void test1() throws IOException, WriteException {
         RandomFunc randomFunc=new RandomFunc();
         ArrayList<ArrayList<String>> list=new ArrayList<ArrayList<String>>();
         for (int i = 0; i <20; i++) {
@@ -21,6 +23,5 @@ public class test {
         }
 
         WriteToExcel.writeToExcel(list);
-
     }
 }

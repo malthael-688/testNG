@@ -19,10 +19,10 @@ import java.util.ArrayList;
  * @date 2019/8/21
  */
 public class WriteToExcel {
-    static String path = "C:\\Users\\lenovo\\Desktop\\GitHub\\testNG\\register_data.xls";
+    static String path = "C:\\Users\\lenovo\\Desktop\\GitHub\\testNG\\data\\register_data.xls";
 
     public static void writeToExcel(ArrayList<ArrayList<String>> datas) throws IOException, WriteException {
-        OutputStream os = new FileOutputStream(path);
+        OutputStream os = new FileOutputStream(path,true);
         WritableWorkbook wb = Workbook.createWorkbook(os);
         CellView cv = new CellView();
         cv.setAutosize(true);

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="2" total="9" passed="5">
+<testng-results skipped="0" failed="5" ignored="2" total="20" passed="13">
   <reporter-output>
   </reporter-output>
-  <suite name="SuperXMLCtrl" duration-ms="20558" started-at="2019-08-25T08:10:35Z" finished-at="2019-08-25T08:10:56Z">
+  <suite name="SuperXMLCtrl" duration-ms="46124" started-at="2019-08-27T05:54:37Z" finished-at="2019-08-27T05:55:23Z">
     <groups>
     </groups>
-    <test name="AllTest" duration-ms="20558" started-at="2019-08-25T08:10:35Z" finished-at="2019-08-25T08:10:56Z">
+    <test name="AllTest" duration-ms="46124" started-at="2019-08-27T05:54:37Z" finished-at="2019-08-27T05:55:23Z">
       <class name="com.dcits.demo.OpenChrome">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="init" is-config="true" duration-ms="4445" started-at="2019-08-25T16:10:36Z" finished-at="2019-08-25T16:10:41Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="init" is-config="true" duration-ms="4950" started-at="2019-08-27T13:54:39Z" finished-at="2019-08-27T13:54:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="register(java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="register" duration-ms="720" started-at="2019-08-25T16:10:41Z" finished-at="2019-08-25T16:10:41Z">
+        <test-method status="PASS" signature="register(java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="register" duration-ms="3196" started-at="2019-08-27T13:54:44Z" finished-at="2019-08-27T13:54:47Z">
           <params>
             <param index="0">
               <value>
@@ -24,39 +24,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [注册成功!] but found [账号已存在]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [注册成功!] but found [账号已存在]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at com.dcits.demo.OpenChrome.register(OpenChrome.java:35)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- register -->
-        <test-method status="PASS" signature="repeatregister(java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="repeatregister" duration-ms="2706" started-at="2019-08-25T16:10:41Z" finished-at="2019-08-25T16:10:44Z">
+        <test-method status="PASS" signature="repeatregister(java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="repeatregister" duration-ms="2803" started-at="2019-08-27T13:54:47Z" finished-at="2019-08-27T13:54:50Z">
           <params>
             <param index="0">
               <value>
@@ -72,7 +43,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- repeatregister -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="login" duration-ms="2604" started-at="2019-08-25T16:10:44Z" finished-at="2019-08-25T16:10:47Z">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="login" duration-ms="2673" started-at="2019-08-27T13:54:50Z" finished-at="2019-08-27T13:54:53Z">
           <params>
             <param index="0">
               <value>
@@ -88,7 +59,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="loginFromExcel(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromExcel" duration-ms="2636" started-at="2019-08-25T16:10:47Z" data-provider="getData" finished-at="2019-08-25T16:10:50Z">
+        <test-method status="PASS" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="2641" started-at="2019-08-27T13:54:53Z" data-provider="getData" finished-at="2019-08-27T13:54:56Z">
           <params>
             <param index="0">
               <value>
@@ -96,7 +67,9 @@
               </value>
             </param>
             <param index="1">
-              <value is-null="true"/>
+              <value>
+                <![CDATA[asd]]>
+              </value>
             </param>
             <param index="2">
               <value>
@@ -106,8 +79,29 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginFromExcel -->
-        <test-method status="PASS" signature="loginFromExcel(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromExcel" duration-ms="2633" started-at="2019-08-25T16:10:50Z" data-provider="getData" finished-at="2019-08-25T16:10:52Z">
+        </test-method> <!-- loginFromDB -->
+        <test-method status="PASS" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="2711" started-at="2019-08-27T13:54:56Z" data-provider="getData" finished-at="2019-08-27T13:54:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1041405881]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4546]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[账号或密码错误]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFromDB -->
+        <test-method status="PASS" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="2679" started-at="2019-08-27T13:54:59Z" data-provider="getData" finished-at="2019-08-27T13:55:01Z">
           <params>
             <param index="0">
               <value>
@@ -127,17 +121,17 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginFromExcel -->
-        <test-method status="PASS" signature="loginFromExcel(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromExcel" duration-ms="2628" started-at="2019-08-25T16:10:52Z" data-provider="getData" finished-at="2019-08-25T16:10:55Z">
+        </test-method> <!-- loginFromDB -->
+        <test-method status="PASS" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="2679" started-at="2019-08-27T13:55:01Z" data-provider="getData" finished-at="2019-08-27T13:55:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[1041405881]]>
+                <![CDATA[554854695]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[]]>
+                <![CDATA[helloworld]]>
               </value>
             </param>
             <param index="2">
@@ -148,36 +142,62 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginFromExcel -->
-        <test-method status="FAIL" signature="loginFromExcel(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromExcel" duration-ms="644" started-at="2019-08-25T16:10:55Z" data-provider="getData" finished-at="2019-08-25T16:10:56Z">
+        </test-method> <!-- loginFromDB -->
+        <test-method status="FAIL" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="596" started-at="2019-08-27T13:55:04Z" data-provider="getData" finished-at="2019-08-27T13:55:05Z">
           <params>
             <param index="0">
-              <value>
-                <![CDATA[1041405881]]>
-              </value>
-            </param>
-            <param index="1">
               <value>
                 <![CDATA[]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[daXyIIMUvasNMU]]>
+              </value>
+            </param>
             <param index="2">
-              <value is-null="true"/>
+              <value>
+                <![CDATA[账号为空]]>
+              </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [null] but found [账号或密码错误]]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#result"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'HELLOWORLD', ip: '192.168.162.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:10412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1f3b99277ae5630c14d46581a945fe8b
+*** Element info: {Using=id, value=result}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [null] but found [账号或密码错误]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:130)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at com.dcits.demo.OpenChrome.loginFromExcel(OpenChrome.java:80)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#result"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'HELLOWORLD', ip: '192.168.162.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:10412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1f3b99277ae5630c14d46581a945fe8b
+*** Element info: {Using=id, value=result}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.dcits.demo.OpenChrome.loginFromDB(OpenChrome.java:104)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -193,11 +213,433 @@
 	at java.lang.Thread.run(Thread.java:748)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginFromExcel -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="close" is-config="true" duration-ms="127" started-at="2019-08-25T16:10:56Z" finished-at="2019-08-25T16:10:56Z">
+        </test-method> <!-- loginFromDB -->
+        <test-method status="PASS" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="2674" started-at="2019-08-27T13:55:05Z" data-provider="getData" finished-at="2019-08-27T13:55:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[12201142]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[daXyIIMUvasNMU]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[不存在]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFromDB -->
+        <test-method status="PASS" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="2694" started-at="2019-08-27T13:55:07Z" data-provider="getData" finished-at="2019-08-27T13:55:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[12201142]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[daXyIIMUvasNMU]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[不存在]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFromDB -->
+        <test-method status="FAIL" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="576" started-at="2019-08-27T13:55:10Z" data-provider="getData" finished-at="2019-08-27T13:55:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[589556900892714571576]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[daXyIIMUvasNMU]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[不存在]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#result"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'HELLOWORLD', ip: '192.168.162.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:10412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1f3b99277ae5630c14d46581a945fe8b
+*** Element info: {Using=id, value=result}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#result"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'HELLOWORLD', ip: '192.168.162.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:10412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1f3b99277ae5630c14d46581a945fe8b
+*** Element info: {Using=id, value=result}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.dcits.demo.OpenChrome.loginFromDB(OpenChrome.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFromDB -->
+        <test-method status="FAIL" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="553" started-at="2019-08-27T13:55:11Z" data-provider="getData" finished-at="2019-08-27T13:55:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[122=1142]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[daXyIIMUvasNMU]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[不存在]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#result"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'HELLOWORLD', ip: '192.168.162.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:10412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1f3b99277ae5630c14d46581a945fe8b
+*** Element info: {Using=id, value=result}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#result"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'HELLOWORLD', ip: '192.168.162.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:10412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1f3b99277ae5630c14d46581a945fe8b
+*** Element info: {Using=id, value=result}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.dcits.demo.OpenChrome.loginFromDB(OpenChrome.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFromDB -->
+        <test-method status="FAIL" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="551" started-at="2019-08-27T13:55:11Z" data-provider="getData" finished-at="2019-08-27T13:55:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[122Z1142]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[daXyIIMUvasNMU]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[不存在]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#result"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'HELLOWORLD', ip: '192.168.162.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:10412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1f3b99277ae5630c14d46581a945fe8b
+*** Element info: {Using=id, value=result}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#result"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'HELLOWORLD', ip: '192.168.162.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:10412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1f3b99277ae5630c14d46581a945fe8b
+*** Element info: {Using=id, value=result}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.dcits.demo.OpenChrome.loginFromDB(OpenChrome.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFromDB -->
+        <test-method status="PASS" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="2671" started-at="2019-08-27T13:55:12Z" data-provider="getData" finished-at="2019-08-27T13:55:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[97174026]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[不存在]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFromDB -->
+        <test-method status="PASS" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="2681" started-at="2019-08-27T13:55:14Z" data-provider="getData" finished-at="2019-08-27T13:55:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[97174026]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[OcpuxbRi]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[不存在]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFromDB -->
+        <test-method status="PASS" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="2706" started-at="2019-08-27T13:55:17Z" data-provider="getData" finished-at="2019-08-27T13:55:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[97174026]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[OcpuxbRi]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[不存在]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFromDB -->
+        <test-method status="FAIL" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="555" started-at="2019-08-27T13:55:20Z" data-provider="getData" finished-at="2019-08-27T13:55:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OcpuxbRi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rTeSjbEvTtHjYUpshIncvMxwU]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[不存在]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#result"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'HELLOWORLD', ip: '192.168.162.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:10412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1f3b99277ae5630c14d46581a945fe8b
+*** Element info: {Using=id, value=result}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#result"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'HELLOWORLD', ip: '192.168.162.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:10412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1f3b99277ae5630c14d46581a945fe8b
+*** Element info: {Using=id, value=result}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.dcits.demo.OpenChrome.loginFromDB(OpenChrome.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFromDB -->
+        <test-method status="PASS" signature="loginFromDB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="loginFromDB" duration-ms="2669" started-at="2019-08-27T13:55:20Z" data-provider="getData" finished-at="2019-08-27T13:55:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[97174026]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[&=?+x++=]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[不存在]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFromDB -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.dcits.demo.OpenChrome@5056dfcb]" name="close" is-config="true" duration-ms="159" started-at="2019-08-27T13:55:23Z" finished-at="2019-08-27T13:55:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->

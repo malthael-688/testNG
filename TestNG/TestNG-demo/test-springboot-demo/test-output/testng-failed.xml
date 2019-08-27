@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [SuperXMLCtrl]" parallel="classes" allow-return-values="true">
   <listeners>
+    <listener class-name="com.dcits.report.ExtentTestNGIReporterListener1"/>
     <listener class-name="com.dcits.listeners.Select"/>
   </listeners>
   <test name="AllTest(failed)" parallel="classes">
@@ -10,9 +11,8 @@
     <classes>
       <class name="com.dcits.demo.OpenChrome">
         <methods>
+          <include name="loginFromDB" invocation-numbers="4 7 8 9 13"/>
           <include name="init"/>
-          <include name="loginFromExcel" invocation-numbers="3"/>
-          <include name="register" invocation-numbers="0"/>
           <include name="close"/>
         </methods>
       </class> <!-- com.dcits.demo.OpenChrome -->
